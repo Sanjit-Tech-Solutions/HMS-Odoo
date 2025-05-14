@@ -10,8 +10,8 @@
     - Medical History, Vital Signs, Medication Plans
     - Medical Billing
     """,
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
+    'author': "Sanjit Tech",
+    'website': "https://www.Sanjittechsolutions.com",
     'category': 'Healthcare',
     'version': '17.0.1.0.0',
     'sequence': 5,
