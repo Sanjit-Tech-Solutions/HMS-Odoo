@@ -13,9 +13,10 @@
     'author': "My Company",
     'website': "https://www.yourcompany.com",
     'category': 'Healthcare',
-    'version': '1.0.1',
+    'version': '17.0.1.0.0',
     'sequence': 5,
     'depends': ['base'],
+    'images':['static/description/banner.png'],
 
     'data': [
         # Security
