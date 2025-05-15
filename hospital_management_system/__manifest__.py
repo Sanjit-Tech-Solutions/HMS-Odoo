@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Hospital Management System",
-    'summary': "Hospital Management System with ICU Bed Booking",
+    'summary': "Hospital Management System with Patient Registration,"
+               "Doctor Log,ICU Bed booking and Medicial Billing",
     'description': """
     Complete Hospital Management System including:
     - Patient Management
@@ -12,7 +13,7 @@
     """,
     'author': "Sanjit Tech",
     'website': "https://www.Sanjittechsolutions.com",
-    'category': 'Healthcare',
+    'category': 'Hospital Management System',
     'version': '17.0.1.0.0',
     'sequence': 5,
     'depends': ['base'],
@@ -53,16 +54,6 @@
 
         # Test Types
         'data/test_type_data.xml',
-
-
-        # Future/Optional Views
-        # 'views/labtest_views.xml',
-        # 'views/bloodtest_views.xml',
-        # 'views/urinetest_views.xml',
-        # 'views/cardiactest_views.xml',
-        # 'views/rapiddiagnostic_views.xml',
-        # 'views/imagingtest_views.xml',
-        # 'views/billing_log_views.xml',
     ],
 
     'assets': {
