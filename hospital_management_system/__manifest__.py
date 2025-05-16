@@ -47,6 +47,7 @@
         'views/icu_bed_login_view.xml',
         'views/medical_billing_login_view.xml',
 
+
         # Medical Billing
         'views/medicalbill_views.xml',
         'report/report_medical_bill.xml',
