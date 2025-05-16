@@ -51,6 +51,7 @@
         # Medical Billing
         'views/medicalbill_views.xml',
         'report/report_medical_bill.xml',
+
         # 'views/medicalbillreport_views.xml',
 
         # Test Types
@@ -66,6 +67,7 @@
             'hospital_management_system/static/src/css/medical_bills_style.css',
          #  'hospital_management_system/static/src/js/form_back_button.js',
            'hospital_management_system/static/src/css/icu_bed.css',
+            'hospital_management_system/static/src/css/style.css'
            'hospital_management_system/static/src/css/bed.css',
 
             # Static Images
