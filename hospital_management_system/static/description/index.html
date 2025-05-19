@@ -1,49 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <title>Hospital Management System - HMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f6f8;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f9;
+      min-height: 90vh;
       margin: 0;
-      padding: 40px;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
     }
-    h1 {
-      color: #2c3e50;
-      font-size: 32px;
+
+    .container {
+      margin: 50px 0 0 12%;
+      display: flex;
+      width: 95%;
+      max-width: 1200px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .left {
+      flex: 1;
+      color: #007bff;
+      padding: 60px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: left;
+      line-height: 1.2;
+    }
+
+    .right {
+      flex: 1.2;
+      padding: 80px 20px 40px 40px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .services {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+      margin: 50px 0;
+    }
+
+    .box {
+      background: #fff;
+      padding: 50px;
+      width: 300px;
+      height: 150px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow:
+        rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .box:hover {
+      transform: translateY(-8px);
+    }
+
+    .box i {
+      font-size: 40px;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+
+    .box h3 {
+      font-size: 18px;
+      margin: 0;
+      color: #333;
+    }
+
+    .modules h1 {
+      text-align: left;
+      color: #007bff;
+      margin-top: 3%;
+      margin-left: 20%;
+      font-size: 4.5rem;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 10px 5%;
+      width: 90%;
+      max-width: 1200px;
+      margin-bottom: 60px;
+    }
+
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .section .text {
+      flex: 1;
+    }
+
+    .section .text h2 {
+      font-size: 3rem;
+      line-height: 1.6;
+      color: #333;
       margin-bottom: 20px;
     }
-    p {
-      color: #555;
-      font-size: 18px;
-      margin-bottom: 40px;
+
+    .section .text p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #444;
     }
-    img {
-      width: 80%;
-      max-width: 800px;
-      border: 1px solid #ccc;
+
+    .section img {
+      flex: 0.8;
+      max-width: 45%;
+      height: auto;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-left: 2%;
+      margin-right: 2%;
     }
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #888;
+
+    .doctor {
+      width: 90%;
+      max-width: 1200px;
+      margin-bottom: 80px;
+      text-align: center;
+    }
+
+    .doctor h1 {
+      margin-top: 5%;
+      font-size: 4.5rem;
+      font-weight: bold;
+      line-height: 1.6;
+      color: #007bff;
+    }
+
+    .doctor img {
+      max-width: 60%;
+      height: auto;
+      margin: 30px 0 20px 20%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .doctor p {
+      margin: 5% 15%;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #444;
+      text-align: justify;
     }
   </style>
 </head>
+
 <body>
-  <h1>Hospital Management System</h1>
-  <p>A complete Odoo-based healthcare solution including patient registration, ICU bed booking, prescriptions, lab tests, and medical billing.</p>
+  <div class="container">
+    <div class="left">
+      <h1>
+        Hospital<br />
+        Management<br />
+        System
+      </h1>
+    </div>
+    <div class="right">
+      <p>
+        We have developed a robust Hospital Management System using Odoo that
+        simplifies and automates day-to-day hospital operations. Designed for
+        seamless coordination between departments, the system offers an
+        intuitive interface backed by a powerful backend. It enhances workflow
+        efficiency, reduces manual effort, and ensures smooth information
+        flow. Built on the flexible Odoo framework, this solution is tailored
+        to improve overall hospital performance and patient care.
+      </p>
+    </div>
+  </div>
 
-  <!-- Make sure the image is in the same folder as this HTML -->
-  <img src="Screenshot(25).png" alt="HMS Overview" />
+  <div class="services">
+    <div class="box">
+      <i class="fas fa-hospital-user"></i>
+      <h3>Reception</h3>
+    </div>
+    <div class="box">
+      <i class="fas fa-user-md"></i>
+      <h3>Doctor Log</h3>
+    </div>
+    <div class="box">
+      <i class="fas fa-procedures"></i>
+      <h3>ICU Management</h3>
+    </div>
+    <div class="box">
+      <i class="fas fa-file-invoice-dollar"></i>
+      <h3>Medical Billing</h3>
+    </div>
+  </div>
 
-  <footer>
-    &copy; 2025 Your Company Name. All rights reserved.
-  </footer>
-</body>
-</html>
+  <div class="modules">
+    <h1>Reception</h1>
+  </div>
+
+  <div class="section registration-section">
+    <div class="text">
+      <h2>Registrations</h2>
+      <p>
+        The Registrations module is the first step in managing patient data
+        efficiently. It collects essential personal and medical details
+        required for hospital services. With a structured approach, it ensures
+        accuracy and completeness of patient records. This foundational data
+        supports all further interactions within the system. It streamlines
+        the onboarding process while maintaining compliance with healthcare
+        standards.
+      </p>
+    </div>
+    <img
+      src="static/description/Screenshot25.png"
+      alt="Patient Registration"
+      class="reg-image"
+    />
+  </div>
+
+  <div class="section reception-section">
+    <div class="text">
+      <h2>Vital Signs</h2>
+      <p>
+        The Vital Signs menu allows hospital staff to record essential health
+        metrics for each patient. It captures data such as temperature, blood
+        pressure, heart rate, and respiratory rate. These readings are linked
+        to the patient's medical record for easy reference. Monitoring vitals
+        ensures timely diagnosis and treatment. This feature supports accurate
+        and efficient patient care tracking.
+      </p>
+    </div>
+    <img
+      src="static/description/Screenshot25.png"
+      alt="Vital Signs"
+      class="reception-image"
+    />
+  </div>
+
+  <div class="section registration-section">
+    <div class="text">
+      <h2>Appointments</h2>
+      <p>
+        The Appointments feature streamlines the scheduling process between
+        patients and doctors. It allows receptionists to easily book, update,
+        or cancel appointments while avoiding time conflicts. Each appointment
+        is linked with patient and doctor records for quick reference. The
+        system sends automatic alerts to ensure no-shows are minimized. With a
+        structured and efficient interface, managing daily schedules becomes
+        smooth and organized. This results in better time management and
+        improved patient satisfaction.
+      </p>
+    </div>
+    <img
+      src="static/description/Screenshot25.png"
+      alt="Appointments"
+      class="reg-image"
+    />
+  </div>
+
+  <div class="doctor">
+    <h1>Doctor Log</h1>
+    <img
+      src="static/description/Screenshot25.png"
+      alt="Doctor Log"
+      class="doctor-image"
+    />
+  </div>
