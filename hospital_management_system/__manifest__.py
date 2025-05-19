@@ -75,9 +75,9 @@
             'hospital_management_system/static/description/bed1.png',
           #  'hospital_management_system/static/src/js/medical_bill_header_style.js',
         ],
-        # 'web.assets_frontend': [
-        #     'hospital_management_system/static/src/js/reset_form.js',
-        # ],
+        'web.assets_frontend': [
+            'hospital_management_system/static/src/css/style.css'
+        ],
     },
 
     'installable': True,
