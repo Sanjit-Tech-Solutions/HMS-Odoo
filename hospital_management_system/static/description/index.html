@@ -2,128 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Hospital Management System</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Hospital Management System - HMS</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f6f9;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
       margin: 0;
-    }
-    .container, .services, .registration-section, .reception-section, .doctor, .modules, .contact-container {
       padding: 40px;
-    }
-    .container {
-      display: flex;
-      margin: 50px auto;
-      max-width: 1200px;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .left {
-      flex: 1;
-      color: #007BFF;
-      padding: 60px;
-      font-size: 2.5rem;
-      font-weight: bold;
-    }
-    .right {
-      flex: 1.2;
-      padding: 60px 40px;
-      color: #333;
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .box {
-      width: 260px;
-      height: 150px;
-      margin: 20px;
-      background: #fff;
-      padding: 20px;
       text-align: center;
-      border-radius: 12px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -20px,
-                  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
-    .box i {
-      font-size: 40px;
-      color: #007bff;
-      margin-bottom: 15px;
-    }
-    .box h3 {
-      font-size: 18px;
-      color: #333;
-    }
-    .section-title {
-      font-size: 4.5rem;
-      font-weight: bold;
-      color: #007bff;
+    h1 {
+      color: #2c3e50;
+      font-size: 32px;
       margin-bottom: 20px;
     }
-    .section-image {
-      flex: 0.8;
-      max-width: 45%;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    p {
+      color: #555;
+      font-size: 18px;
+      margin-bottom: 40px;
     }
-    .section-content {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #333;
+    img {
+      width: 80%;
+      max-width: 800px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
 <body>
+  <h1>Hospital Management System</h1>
+  <p>A complete Odoo-based healthcare solution including patient registration, ICU bed booking, prescriptions, lab tests, and medical billing.</p>
 
-  <div class="container">
-    <div class="left">
-      <h1>Hospital<br>Management<br>System</h1>
-    </div>
-    <div class="right">
-      <p>
-        We have developed a robust Hospital Management System using Odoo that simplifies and automates
-        day-to-day hospital operations...
-      </p>
-    </div>
-  </div>
+  <!-- Make sure the image is in the same folder as this HTML -->
+  <img src="Screenshot(25).png" alt="HMS Overview" />
 
-  <div class="services">
-    <div class="box"><i class="fas fa-hospital-user"></i><h3>Reception</h3></div>
-    <div class="box"><i class="fas fa-user-md"></i><h3>Doctor Log</h3></div>
-    <div class="box"><i class="fas fa-procedures"></i><h3>ICU Management</h3></div>
-    <div class="box"><i class="fas fa-file-invoice-dollar"></i><h3>Medical Billing</h3></div>
-  </div>
-
-  <div class="modules">
-    <h1 class="section-title">Reception</h1>
-  </div>
-
-  <div class="registration-section" style="display: flex;">
-    <div class="reg-text">
-      <h2 style="font-size: 3rem;">Registrations</h2>
-      <p class="section-content">
-        The Registrations module is the first step in managing patient data efficiently...
-      </p>
-    </div>
-    <img src="/hospital_management_system/static/description/Screenshot(25).png" alt="Patient Registration" class="section-image" />
-  </div>
-
-  <!-- Repeat for other sections like Doctor Log, ICU Booking, Medication Plan, Medical Billing -->
-
-  <div class="contact-container" style="background-image: url('/hospital_management_system/static/description/your_background.jpg'); background-size: cover;">
-    <div class="contact-card">
-      <h1>Sanjit Tech Solutions Private Limited</h1>
-      <p>For reliable software solutions that streamline your operations...</p>
-      <div class="contact-info"><strong>Phone:</strong> <span>+91 98765 43210</span></div>
-      <div class="contact-info"><strong>Email:</strong> <span>hello@hospitalms.com</span></div>
-      <a href="mailto:hello@hospitalms.com" class="btn" style="background-color:#007bff; color:white; padding:10px 20px; border-radius: 25px; text-decoration: none;">Contact Us</a>
-    </div>
-  </div>
-
+  <footer>
+    &copy; 2025 Your Company Name. All rights reserved.
+  </footer>
 </body>
 </html>
