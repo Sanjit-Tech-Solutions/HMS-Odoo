@@ -16,6 +16,6 @@ class HospitalVitalSign(models.Model):
             'type': 'ir.actions.act_window',
             'name': 'Patient Vitals',
             'res_model': 'hospital.vital.sign',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'target': 'current',
         }

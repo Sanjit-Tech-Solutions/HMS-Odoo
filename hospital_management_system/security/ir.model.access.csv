@@ -15,8 +15,4 @@ access_hospital_medicalbill_line,hospital_management.model_medical_bill_line,mod
 access_medicine_master,medicine.master,model_medicine_master,base.group_user,1,1,1,1
 access_hospital_medicine_master,hospital.medicine.master,model_hospital_medicine_master,base.group_user,1,1,1,1
 access_hospital_reception_dashboard,hospital_management.model_reception_dashboard,model_reception_dashboard,base.group_user,1,1,1,1
-access_hospital_reception_login,hospital_management.model_reception_login,model_reception_login,base.group_user,1,1,1,1
-access_medical_billing_login,access.medical.billing.login,model_medical_billing_login,,1,1,1,1
-access_doctor_login,access_doctor_login,model_doctor_login,,1,1,1,1
-access_icu_bed_login,access_icu_bed_login,model_icu_bed_login,base.group_user,1,1,1,1
 access_hospital_test_type_user,hospital.test.type,model_hospital_test_type,base.group_user,1,1,1,1

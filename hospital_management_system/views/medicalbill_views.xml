@@ -1,17 +1,17 @@
 <odoo>
 
-    <!-- Tree View: Medical Bills -->
-    <record id="view_medical_bill_tree" model="ir.ui.view">
-        <field name="name">medical.bill.tree</field>
+    <!-- list View: Medical Bills -->
+    <record id="view_medical_bill_list" model="ir.ui.view">
+        <field name="name">medical.bill.list</field>
         <field name="model">medical.bill</field>
         <field name="arch" type="xml">
-            <tree string="Medical Bills" >
+            <list string="Medical Bills" >
                 <field name="patient_id" class="bg-blue" />
                 <field name="patient_name" class="bg-green"/>
                 <field name="patient_age" class="bg-red"/>
                 <field name="patient_gender" class="bg-yellow" optional="show"/>
                 <field name="total_amount" readonly="1" class="bg-purple" optional="show"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -38,12 +38,12 @@
 
                    <group>
                     <field name="line_ids" string="Medicines">
-                        <tree editable="bottom" >
+                        <list editable="bottom" >
                             <field name="medicine_id" width="40%%"/>
                             <field name="cost" width="20%%"/>
                             <field name="quantity" width="20%%"/>
                             <field name="subtotal" width="20%%" readonly="1" />
-                        </tree>
+                        </list>
                     </field>
                     </group>
 
@@ -68,8 +68,8 @@
     <record id="action_medical_bill" model="ir.actions.act_window">
         <field name="name">Medical Billing</field>
         <field name="res_model">medical.bill</field>
-        <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="view_medical_bill_tree"/>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_medical_bill_list"/>
     </record>
 
     <!-- Menu: Medical Billing -->
@@ -77,15 +77,15 @@
 
     <!-- ================= Medicine Master Views ================= -->
 
-    <!-- Tree View: Medicine Master -->
-    <record id="view_medicine_master_tree" model="ir.ui.view">
-        <field name="name">medicine.master.tree</field>
+    <!-- list View: Medicine Master -->
+    <record id="view_medicine_master_list" model="ir.ui.view">
+        <field name="name">medicine.master.list</field>
         <field name="model">medicine.master</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name"/>
                 <field name="cost"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -109,7 +109,7 @@
     <record id="action_medicine_master" model="ir.actions.act_window">
         <field name="name">Medicine Master</field>
         <field name="res_model">medicine.master</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <!-- Menu: Medicine Master -->

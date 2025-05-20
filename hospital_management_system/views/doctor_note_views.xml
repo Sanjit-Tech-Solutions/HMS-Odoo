@@ -1,13 +1,13 @@
 <odoo>
-    <record id="view_doctor_note_tree" model="ir.ui.view">
-        <field name="name">hospital.doctor.note.tree</field>
+    <record id="view_doctor_note_list" model="ir.ui.view">
+        <field name="name">hospital.doctor.note.list</field>
         <field name="model">hospital.doctor.note</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="patient_id" optional="show"/>
                 <field name="doctor_id" optional="show"/>
                 <field name="note_date" optional="show"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -38,7 +38,7 @@
     <record id="action_doctor_note" model="ir.actions.act_window">
         <field name="name">Doctor Notes</field>
         <field name="res_model">hospital.doctor.note</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <odoo>

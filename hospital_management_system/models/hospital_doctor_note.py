@@ -14,7 +14,7 @@ class HospitalDoctorNote(models.Model):
             'type': 'ir.actions.act_window',
             'name': 'Doctor Notes',
             'res_model': 'hospital.doctor.note',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'target': 'current',
         }
 

@@ -19,7 +19,7 @@
                         <notebook>
                        <page string="Prescribed Medicines">
         <field name="medicine_line_ids">
-            <tree editable="bottom">
+            <list editable="bottom">
                <field name="medicine_name" placeholder="Start typing..." width="25%"/>
                 <field name="dosage" width="20%"/>
                 <field name="morning_before" width="9.17%"/>
@@ -28,7 +28,7 @@
                 <field name="afternoon_after" width="9.17%"/>
                 <field name="night_before" width="9.17%"/>
                 <field name="night_after" width="9.15%"/>
-            </tree>
+            </list>
             <form>
             <group>
                 <field name="medicine_name"/>
@@ -57,15 +57,15 @@
         </field>
     </record>
 
-    <record id="view_medical_history_tree" model="ir.ui.view">
+    <record id="view_medical_history_list" model="ir.ui.view">
         <field name="name">hospital.medical.history.list</field>
         <field name="model">hospital.medical.history</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="patient_id"/>
                 <field name="condition" class="wrap-condition"/>
                 <field name="diagnosis_date"/>
-            </tree>
+            </list>
         </field>
     </record>
 

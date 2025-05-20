@@ -1,10 +1,10 @@
 <odoo>
-    <!-- Tree View -->
-    <record id="view_medication_plan_line_tree" model="ir.ui.view">
-        <field name="name">hospital.medication.plan.line.tree</field>
+    <!-- list View -->
+    <record id="view_medication_plan_line_list" model="ir.ui.view">
+        <field name="name">hospital.medication.plan.line.list</field>
         <field name="model">hospital.medication.plan.line</field>
         <field name="arch" type="xml">
-            <tree string="Medication Plan Lines">
+            <list string="Medication Plan Lines">
 
                 <field name="bed_id"/>
                 <field name="bed_patient_name"/>
@@ -17,7 +17,7 @@
                 <field name="frequency_evening" optional="show"/>
                 <field name="frequency_night" optional="show"/>
                 <field name="instruction" optional="show"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -61,8 +61,8 @@
     <record id="action_medication_plan" model="ir.actions.act_window">
 
         <field name="res_model">hospital.medication.plan.line</field>
-        <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="view_medication_plan_line_tree"/> <!-- Optional -->
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_medication_plan_line_list"/> <!-- Optional -->
     </record>
 
     <!-- Menu -->

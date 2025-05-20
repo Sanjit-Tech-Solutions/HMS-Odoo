@@ -38,7 +38,7 @@ class Appointment(models.Model):
             'type': 'ir.actions.act_window',
             'name': 'Appointments',
             'res_model': 'hospital.appointment',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'target': 'current',
         }
 
@@ -47,7 +47,7 @@ class Appointment(models.Model):
             'type': 'ir.actions.act_window',
             'name': 'Appointments',
             'res_model': 'hospital.appointment',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'target': 'current',
         }
 

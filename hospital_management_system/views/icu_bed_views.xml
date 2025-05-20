@@ -105,19 +105,19 @@
       </kanban>
     </field>
   </record-->
-    <!-- Tree View -->
-    <!--record id="view_icu_bed_tree" model="ir.ui.view">
-        <field name="name">hospital.icu.bed.tree</field>
+    <!-- list View -->
+    <!--record id="view_icu_bed_list" model="ir.ui.view">
+        <field name="name">hospital.icu.bed.list</field>
         <field name="model">hospital.icu.bed</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name"/>
                 <field name="code"/>
                 <field name="status"/>
                 <field name="is_available"/>
                 <field name="patient_id"/>
                 <field name="assigned_date"/>
-            </tree>
+            </list>
         </field>
     </record-->
 
@@ -125,7 +125,7 @@
     <!--record id="action_icu_beds" model="ir.actions.act_window">
         <field name="name">ICU Beds</field>
         <field name="res_model">hospital.icu.bed</field>
-        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_mode">kanban,list,form</field>
     </record-->
 
     <!-- Menu -->

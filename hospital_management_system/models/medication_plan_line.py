@@ -27,7 +27,7 @@ class MedicationPlanLine(models.Model):
             'type': 'ir.actions.act_window',
             'name': 'Medication Plan Lines',
             'res_model': 'action_medication_plan',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'target': 'current',
         }
 

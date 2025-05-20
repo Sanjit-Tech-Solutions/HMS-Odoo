@@ -20,7 +20,7 @@ class HospitalICUBooking(models.Model):
     start_datetime = fields.Datetime(string='Start Time', default=fields.Datetime.now)
     end_datetime = fields.Datetime(string='End Time')
     notes = fields.Text(string='Notes')
-    bed_image = fields.Image(string="ICU Bed Image", default=lambda self: self._get_default_image())
+   # bed_image = fields.Image(string="ICU Bed Image", default=lambda self: self._get_default_image())
 
     state = fields.Selection([
         ('draft', 'Draft'),
@@ -62,6 +62,6 @@ class HospitalICUBooking(models.Model):
             'type': 'ir.actions.act_window',
             'name': 'ICU Bookings',
             'res_model': 'hospital.icu.booking',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'target': 'current',
         }
