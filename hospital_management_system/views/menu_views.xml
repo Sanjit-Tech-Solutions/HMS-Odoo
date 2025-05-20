@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-        <menuitem id="reception" name="Reception" sequence="0" />
-        <menuitem id="doctor"  name="Doctor Log" sequence="1" />
-        <menuitem id="icu_bed_login" name="ICU Login" sequence="10"/>
-        <menuitem id="billing_id" name="Medical Billing" sequence="2" />
+        <menuitem id="reception" name=" Hospital Reception" sequence="0" />
+        <menuitem id="doctor"  name="HospitalDoctor" sequence="1" />
+        <menuitem id="icu_bed_login" name="Hospital ICU" sequence="3"/>
+        <menuitem id="billing_id" name="Hospital Medical Billing" sequence="2" />
     </data>
 </odoo>
 
