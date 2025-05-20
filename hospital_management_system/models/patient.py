@@ -61,18 +61,19 @@ class Patient(models.Model):
         store=True
     )
 
-    @api.model
-    def create(self, vals):
-        contact_number = vals.get('contact_number')
+    @api.model_create_multi
+    def create(self, vals_list):
+        contact_number = vals_list.get('contact_number')
         if contact_number:
             existing_patient = self.env['hospital.patient'].sudo().search([
                 ('contact_number', '=', contact_number)
             ], limit=1)
             if existing_patient:
-                raise ValidationError(f"A patient with contact number {contact_number} already exists: {existing_patient.name}.")
+                raise ValidationError(
+                    f"A patient with contact number {contact_number} already exists: {existing_patient.name}.")
 
-        if not vals.get('registration_date'):
-            vals['registration_date'] = fields.Datetime.now()
+        if not vals_list.get('registration_date'):
+            vals_list['registration_date'] = fields.Datetime.now()
 
         sequence = self.env['ir.sequence'].sudo().search([('code', '=', 'hospital.patient')], limit=1)
         if not sequence:
@@ -88,10 +89,10 @@ class Patient(models.Model):
         if not self.env['hospital.patient'].sudo().search([]):
             sequence.number_next = 1
 
-        if vals.get('patient_id', 'New') == 'New':
-            vals['patient_id'] = self.env['ir.sequence'].next_by_code('hospital.patient') or 'New'
+        if vals_list.get('patient_id', 'New') == 'New':
+            vals_list['patient_id'] = self.env['ir.sequence'].next_by_code('hospital.patient') or 'New'
 
-        return super(Patient, self).create(vals)
+        return super(Patient, self).create(vals_list)
 
     @api.depends('date_of_birth')
     def _compute_age_display(self):

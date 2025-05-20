@@ -16,7 +16,7 @@
     'category': 'Hospital Management System',
     'version': '18.0.1.0.0',
     'sequence': 5,
-    'depends': ['base'],
+    'depends': ['base','mail'],
     'images':['static/description/banner.png'],
 
     'data': [

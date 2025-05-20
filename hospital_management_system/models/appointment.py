@@ -1,6 +1,7 @@
 from odoo import models, fields, api
 
 class Appointment(models.Model):
+    _inherit = 'mail.thread'
     _name = 'hospital.appointment'
     _description = 'Patient Appointment'
 
