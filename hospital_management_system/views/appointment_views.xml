@@ -2,12 +2,12 @@
 <odoo>
     <data>
 
-        <!-- Tree View -->
+        <!-- tree View -->
         <record id="view_appointment_tree" model="ir.ui.view">
             <field name="name">hospital.appointment.tree</field>
             <field name="model">hospital.appointment</field>
             <field name="arch" type="xml">
-                <tree string="Appointment List" decoration-danger="state == 'cancelled'" decoration-success="state == 'done'">
+                <tree string="Appointment tree" decoration-danger="state == 'cancelled'" decoration-success="state == 'done'">
                     <field name="patient_id" optional="show"/>
                     <field name="doctor_id" optional="show"/>
                     <field name="appointment_date" optional="show"/>

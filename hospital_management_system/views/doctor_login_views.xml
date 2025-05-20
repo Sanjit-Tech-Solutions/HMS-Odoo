@@ -32,4 +32,5 @@
         </record>
           <!--menuitem id="doctor" name="Doctor login"  action="action_doctor_login" /-->
     </data>
+     <menuitem id="doctor"  name="Doctor Log" sequence="1" action="hospital_management_system.action_doctor_login"/>
 </odoo>

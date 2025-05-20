@@ -49,6 +49,6 @@ class HospitalICUBed(models.Model):
             'type': 'ir.actions.act_window',
             'name': 'ICU Bed',
             'res_model': 'hospital.icu.bed',
-            'view_mode': 'kanban,tree,form',
+            'view_mode': 'kanban,list,form',
             'target': 'current',
         }

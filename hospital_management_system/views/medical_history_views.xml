@@ -58,7 +58,7 @@
     </record>
 
     <record id="view_medical_history_tree" model="ir.ui.view">
-        <field name="name">hospital.medical.history.list</field>
+        <field name="name">hospital.medical.history.tree</field>
         <field name="model">hospital.medical.history</field>
         <field name="arch" type="xml">
             <tree>
@@ -72,7 +72,7 @@
     <record id="action_medical_history" model="ir.actions.act_window">
         <field name="name">Medical Histories</field>
         <field name="res_model">hospital.medical.history</field>
-        <field name="view_mode">list,form</field>
+        <field name="view_mode">tree,form</field>
     </record>
  <menuitem id="doctor_id" parent="doctor" action="hospital_management_system.action_medical_history"/>
 

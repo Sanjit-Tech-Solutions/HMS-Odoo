@@ -1,6 +1,6 @@
 /** @odoo-module **/
 
-import { ListRenderer } from '@web/views/tree/list_renderer';
+import { ListRenderer } from '@web/views/list/list_renderer';
 
 ListRenderer.include({
     setup() {
@@ -10,7 +10,7 @@ ListRenderer.include({
     _renderHeader() {
         const thead = this._super(...arguments);
 
-        if (this.props.tree.modelName === 'medical.bill') {
+        if (this.props.list.modelName === 'medical.bill') {
             console.log("✅ Coloring headers for 'medical.bill'");
 
             // Apply custom header background colors

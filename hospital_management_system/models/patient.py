@@ -162,6 +162,6 @@ class Patient(models.Model):
             'type': 'ir.actions.act_window',
             'name': 'Patients',
             'res_model': 'hospital.patient',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'target': 'current',
         }

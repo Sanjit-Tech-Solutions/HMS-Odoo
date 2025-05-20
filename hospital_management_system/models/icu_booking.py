@@ -20,7 +20,7 @@ class HospitalICUBooking(models.Model):
     start_datetime = fields.Datetime(string='Start Time', default=fields.Datetime.now)
     end_datetime = fields.Datetime(string='End Time')
     notes = fields.Text(string='Notes')
-    bed_image = fields.Image(string="ICU Bed Image", default=lambda self: self._get_default_image())
+   # bed_image = fields.Image(string="ICU Bed Image", default=lambda self: self._get_default_image())
 
     state = fields.Selection([
         ('draft', 'Draft'),
@@ -53,15 +53,15 @@ class HospitalICUBooking(models.Model):
             if record.state == 'completed':
                 record.state = 'cancel'  # Change the state to 'draft'
 
-    def _get_default_image(self):
-        # Returning the image directly from a static folder path
-        return open('custom_addons/hospital_management_system/static/description/bed1.png', 'rb').read()
+    # def _get_default_image(self):
+    #     # Returning the image directly from a static folder path
+    #     return open('custom_addons/hospital_management_system/static/description/bed1.png', 'rb').read()
 
     def action_save_icu_save(self):
         return {
             'type': 'ir.actions.act_window',
             'name': 'ICU Bookings',
             'res_model': 'hospital.icu.booking',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'target': 'current',
         }

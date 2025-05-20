@@ -105,7 +105,7 @@
       </kanban>
     </field>
   </record-->
-    <!-- Tree View -->
+    <!-- tree View -->
     <!--record id="view_icu_bed_tree" model="ir.ui.view">
         <field name="name">hospital.icu.bed.tree</field>
         <field name="model">hospital.icu.bed</field>

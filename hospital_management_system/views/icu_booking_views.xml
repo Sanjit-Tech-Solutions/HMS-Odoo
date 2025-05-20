@@ -21,11 +21,6 @@
             <field name="state" widget="statusbar" options="{'clickable':'1'}" />
             <field name="notes"/>
           </group>
-
-          <group>
-            <field name="bed_image" widget="image" class="oe_avatar" options="{'preview_image': 'bed_image'}"/>
-          </group>
-
           <div class="oe_button_box" name="buttons" style="margin-top: 20px; text-align: center;">
             <button name="action_save_icu_save"
                     type="object"

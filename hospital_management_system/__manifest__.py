@@ -37,15 +37,15 @@
         # ICU Bed Booking System
         'views/icu_bed_views.xml',
         'views/icu_booking_views.xml',
-        'data/icu_bed_data.xml',
+
         # 'data/icu_bed_cron.xml',
 
         # Dashboards and Logins
         'views/reception_dashboard_views.xml',
-        'views/reception_login.xml',
-        'views/doctor_login_views.xml',
-        'views/icu_bed_login_view.xml',
-        'views/medical_billing_login_view.xml',
+        # 'views/reception_login.xml',
+        # 'views/doctor_login_views.xml',
+        # 'views/icu_bed_login_view.xml',
+        # 'views/medical_billing_login_view.xml',
 
 
         # Medical Billing
@@ -61,23 +61,23 @@
     'assets': {
         'web.assets_backend': [
             # Custom Styles
-            'hospital_management_system/static/src/css/custom.css',
-            'hospital_management_system/static/src/css/status_styles.css',
-            'hospital_management_system/static/src/css/custom_buttons.css',
+          #  'hospital_management_system/static/src/css/custom.css',
+         #   'hospital_management_system/static/src/css/status_styles.css',
+          #  'hospital_management_system/static/src/css/custom_buttons.css',
             'hospital_management_system/static/src/css/medical_bills_style.css',
          #  'hospital_management_system/static/src/js/form_back_button.js',
-           'hospital_management_system/static/src/css/icu_bed.css',
-            'hospital_management_system/static/src/css/style.css'
-           'hospital_management_system/static/src/css/bed.css',
+         #  'hospital_management_system/static/src/css/icu_bed.css',
+         #   'hospital_management_system/static/src/css/style.css'
+         #  'hospital_management_system/static/src/css/bed.css',
 
             # Static Images
-            'hospital_management_system/static/src/img/bed.png',
-            'hospital_management_system/static/description/bed1.png',
+          #  'hospital_management_system/static/src/img/bed.png',
+          #  'hospital_management_system/static/description/bed1.png',
           #  'hospital_management_system/static/src/js/medical_bill_header_style.js',
         ],
-        'web.assets_frontend': [
-            'hospital_management_system/static/src/css/style.css'
-        ],
+        # 'web.assets_frontend': [
+        #     'hospital_management_system/static/src/css/style.css'
+        # ],
     },
 
     'installable': True,

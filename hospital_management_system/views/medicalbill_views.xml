@@ -1,6 +1,6 @@
 <odoo>
 
-    <!-- Tree View: Medical Bills -->
+    <!-- tree View: Medical Bills -->
     <record id="view_medical_bill_tree" model="ir.ui.view">
         <field name="name">medical.bill.tree</field>
         <field name="model">medical.bill</field>
@@ -77,7 +77,7 @@
 
     <!-- ================= Medicine Master Views ================= -->
 
-    <!-- Tree View: Medicine Master -->
+    <!-- tree View: Medicine Master -->
     <record id="view_medicine_master_tree" model="ir.ui.view">
         <field name="name">medicine.master.tree</field>
         <field name="model">medicine.master</field>

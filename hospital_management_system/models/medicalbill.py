@@ -32,7 +32,7 @@ class MedicalBill(models.Model):
             'type': 'ir.actions.act_window',
             'name': 'Medical Bills',
             'res_model': 'medical.bill',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'target': 'current',
         }
 

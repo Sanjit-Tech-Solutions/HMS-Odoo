@@ -35,7 +35,7 @@ class HospitalMedicalHistory(models.Model):
             'type': 'ir.actions.act_window',
             'name': 'Medical History',
             'res_model': 'hospital.medical.history',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'target': 'current',
         }
 

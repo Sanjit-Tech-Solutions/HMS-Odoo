@@ -8,8 +8,8 @@ from . import hospital_doctor_note
 from . import icu_medication_plan
 from . import  medication_plan_line
 from . import hospital_medical_line
-from . import doctor_login
-from . import icu_bed_login
+#from . import doctor_login
+#from . import icu_bed_login
 from . import hospital_doctor_medicine
 from . import icu_bed
 from . import icu_booking
@@ -27,8 +27,8 @@ from . import medicalbill
 from . import medicinemaster
 from . import medicalbill_line
 from . import reception_dashboard
-from . import reception_login
-from . import medical_billing_login
+#from . import reception_login
+#from . import medical_billing_login
 #from . import hospital_icu_booking_line
 
 
