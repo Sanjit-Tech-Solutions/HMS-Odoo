@@ -6,11 +6,11 @@
         <field name="model">medical.bill</field>
         <field name="arch" type="xml">
             <list string="Medical Bills" >
-                <field name="patient_id" class="bg-blue" />
-                <field name="patient_name" class="bg-green"/>
-                <field name="patient_age" class="bg-red"/>
-                <field name="patient_gender" class="bg-yellow" optional="show"/>
-                <field name="total_amount" readonly="1" class="bg-purple" optional="show"/>
+                <field name="patient_id"  />
+                <field name="patient_name" />
+                <field name="patient_age" />
+                <field name="patient_gender" optional="show"/>
+                <field name="total_amount" readonly="1" optional="show"/>
             </list>
         </field>
     </record>
