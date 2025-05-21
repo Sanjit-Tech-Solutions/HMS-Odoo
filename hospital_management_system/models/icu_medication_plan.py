@@ -38,11 +38,11 @@ class MedicationPlan(models.Model):
     instructions = fields.Text(string='Instructions')
     note = fields.Text(string='Doctor Instructions')
 
-    @api.model
-    def create(self, vals):
-        if vals.get('name', 'New') == 'New':
-            vals['name'] = self.env['ir.sequence'].next_by_code('hospital.medication.plan') or 'New'
-        return super(MedicationPlan, self).create(vals)
+    # @api.model
+    # def create(self, vals):
+    #     if vals.get('name', 'New') == 'New':
+    #         vals['name'] = self.env['ir.sequence'].next_by_code('hospital.medication.plan') or 'New'
+    #     return super(MedicationPlan, self).create(vals)
 
     # Action Methods
     def action_confirm(self):
