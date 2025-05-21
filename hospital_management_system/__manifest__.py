@@ -12,7 +12,7 @@
     - Medical Billing
     """,
     'author': "Sanjit Tech",
-    'website': "https://www.Sanjittechsolutions.com",
+    'website': "https://www.sanjittechsolutions.in",
     'category': 'Hospital Management System',
     'version': '17.0.1.0.0',
     'sequence': 5,
