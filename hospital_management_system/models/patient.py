@@ -125,37 +125,37 @@ class Patient(models.Model):
             else:
                 record.age = "Date of birth not set"
 
-    @api.depends('registration_date')
-    def _compute_registration_day_label(self):
-        for rec in self:
-            if rec.registration_date:
-                local_dt = fields.Datetime.context_timestamp(rec, rec.registration_date)
-                local_date = local_dt.date()
-                user_today = fields.Datetime.context_timestamp(rec, fields.Datetime.now()).date()
-                user_yesterday = user_today - timedelta(days=1)
+    # @api.depends('registration_date')
+    # def _compute_registration_day_label(self):
+    #     for rec in self:
+    #         if rec.registration_date:
+    #             local_dt = fields.Datetime.context_timestamp(rec, rec.registration_date)
+    #             local_date = local_dt.date()
+    #             user_today = fields.Datetime.context_timestamp(rec, fields.Datetime.now()).date()
+    #             user_yesterday = user_today - timedelta(days=1)
 
-                if local_date == user_today:
-                    rec.registration_day_label = "Today"
-                elif local_date == user_yesterday:
-                    rec.registration_day_label = "Yesterday"
-                else:
-                    rec.registration_day_label = local_date.strftime("%b %d, %Y")
-            else:
-                rec.registration_day_label = "Unknown"
+    #             if local_date == user_today:
+    #                 rec.registration_day_label = "Today"
+    #             elif local_date == user_yesterday:
+    #                 rec.registration_day_label = "Yesterday"
+    #             else:
+    #                 rec.registration_day_label = local_date.strftime("%b %d, %Y")
+    #         else:
+    #             rec.registration_day_label = "Unknown"
 
-    def get_registrations_within_date_range_tz_aware(self, start_date_local, end_date_local):
-        """Returns registrations within user's local date range, converted to UTC."""
-        user_tz = self.env.user.tz or 'UTC'
-        tz = timezone(user_tz)
+    # def get_registrations_within_date_range_tz_aware(self, start_date_local, end_date_local):
+    #     """Returns registrations within user's local date range, converted to UTC."""
+    #     user_tz = self.env.user.tz or 'UTC'
+    #     tz = timezone(user_tz)
 
-        start_localized = tz.localize(start_date_local).astimezone(UTC)
-        end_localized = tz.localize(end_date_local).astimezone(UTC)
+    #     start_localized = tz.localize(start_date_local).astimezone(UTC)
+    #     end_localized = tz.localize(end_date_local).astimezone(UTC)
 
-        domain = [
-            ('registration_date', '>=', start_localized),
-            ('registration_date', '<=', end_localized)
-        ]
-        return self.search(domain)
+    #     domain = [
+    #         ('registration_date', '>=', start_localized),
+    #         ('registration_date', '<=', end_localized)
+    #     ]
+    #     return self.search(domain)
 
     def action_save_patient(self):
         return {
